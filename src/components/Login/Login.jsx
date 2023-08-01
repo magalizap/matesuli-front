@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import './Login.css'
-import github from '../../assets/github.png'
-import google from '../../assets/google.png'
+import Github from '../../assets/github.png'
+import Google from '../../assets/google.png'
 import { Link } from "react-router-dom";
-import { Signup } from "../Signup/Signup";
 
 export const Login = () => {
     const datForm = useRef()
@@ -28,6 +27,14 @@ export const Login = () => {
         e.target.reset()
     }
 
+    const github = () => {
+        window.open('http://localhost:4000/api/sessions/githubSignup', '_self')
+    }
+
+    const google = () => {
+        window.open('http://localhost:4000/api/sessions/googleSignup', '_self')
+    }
+
     return (
        <>
        <main className="centerLogin">
@@ -43,15 +50,13 @@ export const Login = () => {
                 
                 <p className="or">O</p>
                 <div className="alinear">
-                    <button className="smbtn" onClick={() => {
-                        const popup = window.open('http://localhost:4000/api/sessions/githubSignup')}}>
-                            <img src={github} className="icon"/>
+                    <button className="smbtn" onClick={github}>
+                            <img src={Github} className="icon"/>
                             Github
                     </button>
 
-                    <button className="smbtn" onClick={() => {
-                        const popup = window.open('http://localhost:4000/api/sessions/githubSignup')}}>
-                            <img src={google} className="icon"/>
+                    <button className="smbtn" onClick={google}>
+                            <img src={Google} className="icon"/>
                             Google
                     </button>
                 </div>

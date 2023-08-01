@@ -4,6 +4,8 @@ import { ItemDetailContainer } from './containers/ItemDetailContainer/ItemDetail
 import { Signup } from './components/Signup/Signup'
 import { Login } from './components/Login/Login'
 import { Profile } from './components/Profile/Profile'
+import Layout from './context/Layout'
+
 
 
 
@@ -15,13 +17,15 @@ export const App = () => {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<ItemListContainer/>}/>
-        <Route path='/category/:category' element={<ItemListContainer />}/>
-        <Route path='/product/:id' element={<ItemDetailContainer/>}/>
-        <Route path='/signup' element={<Signup/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='*' element={<h1>404 Not Found</h1>} />
+        <Route element={<Layout/>}>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/category/:category' element={<ItemListContainer />}/>
+          <Route path='/product/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/signup' element={<Signup/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='*' element={<h1>404 Not Found</h1>} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </>

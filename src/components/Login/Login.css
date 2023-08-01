@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .form {
@@ -34,6 +35,12 @@
     color: #fff;
 }
 
+.btn:hover {
+    background-color: #036666;
+    border-color: #036666;
+  }
+
+
 .icon {
     width: 30px;
 }
@@ -41,10 +48,10 @@
 .smbtn {
     width: 50%;
     border-radius: 10px;
-      display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .or {

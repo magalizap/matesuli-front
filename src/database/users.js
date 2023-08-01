@@ -1,3 +1,5 @@
+import { logger } from "../../../backend/src/middlewares/logger"
+
 export const signupUser = async (client) => {
     const response = await fetch(`http://localhost:4000/api/sessions/signup`, {
         method: 'POST',
@@ -7,7 +9,7 @@ export const signupUser = async (client) => {
         body: JSON.stringify(client)
     })
     const user = await response.json()
-    console.log(user)
+    logger.info(user)
     return user
 }
 
@@ -19,6 +21,6 @@ export const dataCurrent = async () => {
         },
     })
     const profile = await response.json()
-    console.log(profile)
+    logger.info(profile)
     return profile
 }

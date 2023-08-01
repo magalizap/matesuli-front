@@ -1,0 +1,27 @@
+.bg-dorado{
+    background-color: #358F80;
+}
+.navbar-brand{
+    font-size: 3em !important;
+}
+
+.navbar{
+    --bs-navbar-padding-y: none !important;
+    --bs-navbar-brand-padding-y: none !important;
+    --bs-navbar-nav-link-padding-x: 2rem !important;
+}
+
+.dropdown-menu{
+    --bs-dropdown-bg: #212529 !important;
+    --bs-dropdown-color: #fff !important;
+    --bs-dropdown-link-color: #fff !important;
+}
+
+.me-auto{
+    margin-left: auto;
+}
+
+.cart{
+    display: flex !important ;
+
+}

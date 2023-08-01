@@ -1,3 +1,5 @@
+import { logger } from "../../../backend/src/middlewares/logger"
+
 // READ
 export const getProducts = async ()  => {
     const response = await fetch(`http://localhost:4000/api/products`, {
@@ -7,7 +9,7 @@ export const getProducts = async ()  => {
         },
     })
     const products = await response.json()
-    console.log(products)
+    logger.info(products)
     return products.docs
 }
 
@@ -20,6 +22,6 @@ export const getProductById = async (pid) => {
         },
     })
     const product = await response.json()
-    console.log(product)
+    logger.info(product)
     return product
 }

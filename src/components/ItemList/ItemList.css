@@ -2,10 +2,10 @@
 /* ITEM LIST */
 
 .imgbq{
-    background-size: 100vw 100vh;
     background-color: #fffA;
     padding: 2em;
-    min-height: 85vh;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 @media screen and (min-width:300px) {
